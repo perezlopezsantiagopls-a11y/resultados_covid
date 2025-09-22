@@ -1,0 +1,59 @@
+                                                                     Nº Cliente:                                  ALFI19981204
+                                                                                                                                                                                                Fecha Toma: 03/05/2021                                      15:38:25
+                                                                     Folio:                                       210203043208
+                                                                     Fecha de Nacimiento: 04/12/1998                                                                                            Fecha Validación:
+              RSV350153320                                           Médico:              A QUIEN CORRESPONDA
+ Paciente:                                                                                                                                                                                      Sexo:              Mujer                         Edad:           22           Años
+                       Rodriguez, juan
+
+
+
+
+  Descripción
+   ANTÍGENO DE SARS-COV-2 (COVID-19)
+
+
+   ANTIGENO DE SARS-COV-2 (COVID-19)                                                                                            ****                                                                                             Valor de referencia = Negativo
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+  Un resultado POSITIVO indica que ha sido detectado el antígeno del virus SARS-CoV-2, en la muestra analizada.
+
+  Un resultado NEGATIVO con presencia de síntomas, se sugiere realizar la prueba de PCR para confirmar el resultado.
+
+
+
+  Este resultado debe interpretarse por el médico en el contexto clínico; NO debe ser utilizado como la única base para el diagnóstico, toma de decisiones de manejo y tratamiento del paciente.
+
+
+
+
+  Tipo de muestra: Exudado nasofaríngeo
+
+  Método: Inmunocromatografía.
+
+  Kit de detección: SARS-CoV-2 Rapid Antigen Test - Roche Diagnostics
+
+  Sensibilidad: 96.52%
+
+  Especificidad: 99.68%
+
+   VALIDO:
+
+
+
+
+ * = RESULTADOS FUERA DE LOS LIMITES DE REFERENCIA PARA PACIENTES NORMALES
+** = CIFRA DE ALERTA
+ + = ANALITO ACREDITADO ANTE LA ENTIDAD MEXICANA DE ACREDITACIÓN
+
+Laboratorio clínico acreditado por ema, a.c. con acreditación No. CL-066
+                                                                                                                                                                                            ____________________________________
+                                                                                                                                                                                                   QFB. Rubén López de Anda
+                                                                                                                            1        de           1
+                        Preinforme                                                                                                                                                                 Responsable de Laboratorio
+                                                                                                                                                                                                    CED.PROF. PEJ324517
+                                                                                                                                                                                                   Universidad de Guadalajara
+ AVENIDA ADOLFO LOPEZ MATEOS SUR 5561, LAS AGUILAS, ZAPOPAN JALISCO JALISCO                                                                                                                                                                                   Fecha:   03/05/2021     15:57:59
+

@@ -4,106 +4,186 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Resultado COVID</title>
+
+  <!-- Tipografía moderna (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body { 
-      font-family: Arial, sans-serif; 
-      background:#f9fafb; 
-      margin:0; 
-      padding:0; 
+    :root{
+      --bg: #f5f6f8;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --brand: #b91c1c;   /* rojo resultado */
+      --title: #111827;
     }
-    header { 
-      text-align:center; 
-      padding:20px; 
-      background:#fff; 
-      border-bottom:1px solid #ddd; 
+    *{ box-sizing:border-box }
+    html,body{ height:100% }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
-    header .logo-space {
-      height:60px; 
-      margin:10px 0;
-      border:2px dashed #ccc;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#888;
-      font-size:14px;
+
+    /* Header con espacio de logos */
+    header{
+      background:#fff;
+      border-bottom:1px solid var(--border);
+      padding:16px 12px;
     }
-    .container { 
-      max-width:600px; 
-      margin:40px auto; 
-      background:#fff; 
-      border:1px solid #ddd; 
-      border-radius:12px; 
-      padding:20px; 
-      text-align:center; 
+    .brandbar{
+      max-width:960px; margin:0 auto;
+      display:flex; align-items:center; justify-content:center;
+      min-height:64px;
     }
-    h1 { color:#111827; font-size:22px; }
-    h2 { color:#b91c1c; margin:20px 0; }
-    .field { margin:14px 0; font-size:18px; }
-    .field strong { display:block; margin-bottom:4px; color:#374151; }
-    footer {
-      margin-top:40px;
-      background:#f3f4f6;
-      padding:20px;
+    .logo-slot{
+      min-height:60px; width:100%;
+      max-width:720px;
+      border:2px dashed #cfd5de;
+      border-radius:12px;
+      display:flex; align-items:center; justify-content:center; gap:16px;
+      color:#9aa3af; font-size:14px;
+      padding:10px;
+    }
+    .logo-slot img{
+      max-height:60px; height:auto; width:auto;
+      display:block;
+    }
+
+    /* Contenedor principal */
+    .wrap{
+      max-width:960px; margin:28px auto; padding:0 16px;
+    }
+    .title{
+      text-align:center; margin:0 0 18px;
+      font-size:22px; color:var(--title); font-weight:700;
+    }
+
+    /* Tarjeta del resultado */
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      box-shadow:0 8px 20px rgba(17,24,39,.06);
+      overflow:hidden;
+      max-width:720px; margin:0 auto;
+    }
+    .band{
+      background:var(--brand);
+      color:#fff;
       text-align:center;
+      padding:14px 16px;
+      font-weight:700;
+      letter-spacing:.4px;
+      font-size:20px;
+    }
+    .band small{
+      display:block; font-weight:600; opacity:.9; letter-spacing:0; font-size:14px; margin-bottom:2px;
+    }
+    .content{
+      padding:22px 22px 26px;
+      text-align:center;
+    }
+    .field{
+      margin:16px auto;
+      font-size:18px;
+      line-height:1.45;
+      color:var(--text);
+      max-width:520px;
+    }
+    .label{
+      display:block; color:var(--muted); font-size:14px; margin-bottom:6px; font-weight:600;
+      letter-spacing:.2px; text-transform:none;
+    }
+    .value{ font-weight:700; color:#374151 }
+    .folio{ font-weight:700; letter-spacing:.3px }
+
+    footer{
+      margin:34px auto 28px;
+      max-width:960px;
+      background:#f3f4f6;
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:16px;
+      text-align:center;
+      color:var(--muted);
       font-size:14px;
-      color:#555;
     }
-    footer a {
-      color:#2563eb;
-      text-decoration:none;
-      margin:0 8px;
+    footer a{
+      color:#2563eb; text-decoration:none; margin:0 8px; display:inline-block; padding:4px 0;
     }
-    footer a:hover {
-      text-decoration:underline;
-    }
+    footer a:hover{ text-decoration:underline }
+    .fine{ margin-top:10px; font-size:12px; color:#868e99 }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="logo-space">
-    <img src="images.png" alt="Mi logo" width="150">
-  </div>
-</header>
-  <div class="container">
-    <h1>ANTÍGENO SARS-COV-2 (COVID-19)</h1>
-    <h2>Resultado: POSITIVO</h2>
-
-    <div class="field">
-      <strong>Nombre:</strong>
-      Santiago Pérez López
+  <!-- ESPACIO DE LOGOS -->
+  <header>
+    <div class="brandbar">
+      <div class="logo-slot">
+        <!-- Reemplaza o duplica este <img>. Usa el archivo que subiste (p. ej. images.png) -->
+        <img src="images.png" alt="Logo" />
+        <!-- <img src="otro-logo.png" alt="Otro logo" /> -->
+        <!-- Si no tienes logo aún, puedes dejar solo el texto: -->
+        <!-- [ Aquí van tus logos ] -->
+      </div>
     </div>
+  </header>
 
-    <div class="field">
-      <strong>Fecha de toma:</strong>
-      11/09/2025 15:56:56
-    </div>
+  <main class="wrap">
+    <h1 class="title">ANTÍGENO SARS-COV-2 (COVID-19)</h1>
 
-    <div class="field">
-      <strong>Fecha de validación:</strong>
-      11/09/2025 16:21:15
-    </div>
+    <section class="card">
+      <div class="band">
+        <small>Resultado</small>
+        POSITIVO
+      </div>
 
-    <div class="field">
-      <strong>Folio:</strong>
-      250911174532
-    </div>
-  </div>
+      <div class="content">
+        <div class="field">
+          <span class="label">Nombre:</span>
+          <span class="value">Santiago Pérez López</span>
+        </div>
 
-  <footer>
-    <p>Enlaces oficiales:</p>
-    <a href="https://salud-digna.org/" target="_blank">Sitio web</a> |
-    <a href="https://salud-digna.org/aviso-de-privacidad" target="_blank">Aviso de privacidad</a> |
-    <a href="https://salud-digna.org/terminos-y-condiciones" target="_blank">Términos y condiciones</a>
-    <br><br>
-    <a href="https://www.facebook.com/SaludDignaMx" target="_blank">Facebook</a> • 
-    <a href="https://twitter.com/saluddigna" target="_blank">X (Twitter)</a> • 
-    <a href="https://www.instagram.com/saluddigna/" target="_blank">Instagram</a> • 
-    <a href="https://www.youtube.com/@SaludDignaMx" target="_blank">YouTube</a>
-    <p style="margin-top:10px; font-size:12px; color:#777;">
-    </p>
-  </footer>
+        <div class="field">
+          <span class="label">Fecha de toma:</span>
+          <span class="value">11/09/2025&nbsp;&nbsp;15:56:56</span>
+        </div>
+
+        <div class="field">
+          <span class="label">Fecha de validación:</span>
+          <span class="value">11/09/2025&nbsp;&nbsp;16:21:15</span>
+        </div>
+
+        <div class="field">
+          <span class="label">Folio:</span>
+          <span class="folio">250911174532</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <a href="https://salud-digna.org/" target="_blank" rel="noopener noreferrer">Sitio web</a> |
+        <a href="https://salud-digna.org/aviso-de-privacidad" target="_blank" rel="noopener noreferrer">Aviso de privacidad</a> |
+        <a href="https://salud-digna.org/terminos-y-condiciones" target="_blank" rel="noopener noreferrer">Términos y condiciones</a>
+      </div>
+      <div style="margin-top:8px">
+        <a href="https://www.facebook.com/SaludDignaMx" target="_blank" rel="noopener noreferrer">Facebook</a> •
+        <a href="https://twitter.com/saluddigna" target="_blank" rel="noopener noreferrer">X (Twitter)</a> •
+        <a href="https://www.instagram.com/saluddigna/" target="_blank" rel="noopener noreferrer">Instagram</a> •
+        <a href="https://www.youtube.com/@SaludDignaMx" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </div>
+      <p class="fine">Página demo sin logos ni validez oficial.</p>
+    </footer>
+  </main>
 
 </body>
-</html>_
-
+</html>

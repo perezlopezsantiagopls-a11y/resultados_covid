@@ -31,7 +31,6 @@
       -moz-osx-font-smoothing:grayscale;
     }
 
-    /* Header con espacio de logos */
     header{
       background:#fff;
       border-bottom:1px solid var(--border);
@@ -56,7 +55,6 @@
       display:block;
     }
 
-    /* Contenedor principal */
     .wrap{
       max-width:960px; margin:28px auto; padding:0 16px;
     }
@@ -65,7 +63,6 @@
       font-size:22px; color:var(--title); font-weight:700;
     }
 
-    /* Tarjeta del resultado */
     .card{
       background:var(--card);
       border:1px solid var(--border);
@@ -84,7 +81,7 @@
       font-size:20px;
     }
     .band small{
-      display:block; font-weight:600; opacity:.9; letter-spacing:0; font-size:14px; margin-bottom:2px;
+      display:block; font-weight:600; opacity:.9; font-size:14px; margin-bottom:2px;
     }
     .content{
       padding:22px 22px 26px;
@@ -99,7 +96,6 @@
     }
     .label{
       display:block; color:var(--muted); font-size:14px; margin-bottom:6px; font-weight:600;
-      letter-spacing:.2px; text-transform:none;
     }
     .value{ font-weight:700; color:#374151 }
     .folio{ font-weight:700; letter-spacing:.3px }
@@ -110,33 +106,43 @@
       background:#f3f4f6;
       border:1px solid var(--border);
       border-radius:12px;
-      padding:16px;
+      padding:20px;
       text-align:center;
       color:var(--muted);
-      font-size:14px;
+      font-size:15px;
     }
-    footer a{
-      color:#2563eb; text-decoration:none; margin:0 8px; display:inline-block; padding:4px 0;
+    footer .links{
+      margin-bottom:14px;
     }
-    footer a:hover{ text-decoration:underline }
-    .fine{ margin-top:10px; font-size:12px; color:#868e99 }
+    footer .links a{
+      color:#2563eb; text-decoration:none; margin:0 8px; font-weight:500;
+    }
+    footer .links a:hover{ text-decoration:underline }
+    footer .socials{
+      margin-top:8px; display:flex; justify-content:center; gap:22px;
+    }
+    footer .socials a{
+      display:inline-flex; align-items:center; gap:6px;
+      color:var(--text); font-weight:500; text-decoration:none; font-size:15px;
+    }
+    footer .socials img{
+      width:20px; height:20px; object-fit:contain;
+    }
+    footer .socials a:hover{ color:#2563eb }
   </style>
 </head>
 <body>
 
-  <!-- ESPACIO DE LOGOS -->
+  <!-- HEADER / LOGO -->
   <header>
     <div class="brandbar">
       <div class="logo-slot">
-        <!-- Reemplaza o duplica este <img>. Usa el archivo que subiste (p. ej. images.png) -->
         <img src="images.png" alt="Logo" />
-        <!-- <img src="otro-logo.png" alt="Otro logo" /> -->
-        <!-- Si no tienes logo aún, puedes dejar solo el texto: -->
-        <!-- [ Aquí van tus logos ] -->
       </div>
     </div>
   </header>
 
+  <!-- CONTENIDO -->
   <main class="wrap">
     <h1 class="title">ANTÍGENO SARS-COV-2 (COVID-19)</h1>
 
@@ -169,17 +175,28 @@
       </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
-      <div>
+      <div class="links">
         <a href="https://salud-digna.org/" target="_blank" rel="noopener noreferrer">Sitio web</a> |
         <a href="https://salud-digna.org/aviso-de-privacidad" target="_blank" rel="noopener noreferrer">Aviso de privacidad</a> |
         <a href="https://salud-digna.org/terminos-y-condiciones" target="_blank" rel="noopener noreferrer">Términos y condiciones</a>
       </div>
-      <div style="margin-top:8px">
-        <a href="https://www.facebook.com/SaludDignaMx" target="_blank" rel="noopener noreferrer">Facebook</a> •
-        <a href="https://twitter.com/saluddigna" target="_blank" rel="noopener noreferrer">X (Twitter)</a> •
-        <a href="https://www.instagram.com/saluddigna/" target="_blank" rel="noopener noreferrer">Instagram</a> •
-        <a href="https://www.youtube.com/@SaludDignaMx" target="_blank" rel="noopener noreferrer">YouTube</a>
+
+      <div class="socials">
+        <!-- Aquí puedes poner logos (ejemplo: facebook.png, insta.png, etc.) -->
+        <a href="https://www.facebook.com/SaludDignaMx" target="_blank" rel="noopener noreferrer">
+          <img src="facebook.png" alt="Facebook"> Facebook
+        </a>
+        <a href="https://twitter.com/saluddigna" target="_blank" rel="noopener noreferrer">
+          <img src="twitter.png" alt="X"> X (Twitter)
+        </a>
+        <a href="https://www.instagram.com/saluddigna/" target="_blank" rel="noopener noreferrer">
+          <img src="instagram.png" alt="Instagram"> Instagram
+        </a>
+        <a href="https://www.youtube.com/@SaludDignaMx" target="_blank" rel="noopener noreferrer">
+          <img src="youtube.png" alt="YouTube"> YouTube
+        </a>
       </div>
     </footer>
   </main>
